@@ -36,13 +36,8 @@ the plot.
 ###Simulation
 
 Spice circuit simulation confirms that measurements reflect typical bjt
-characteristics. The program used is Linear Technology ltspice, models
-extracted from transistor datasheet parameters.
-
-![Ltspice schematic](img/ic-uce_ltspice-schem.png)
-
-![Ltspice simulation of Ic-Uce-characteristics](img/ic-uce_ltspice-plot.png)
-
+characteristics. The program used is Linear Technology LTspice, transistor
+model extracted from transistor datasheet parameters.
 
 
 Quiescent conditions
@@ -50,11 +45,11 @@ Quiescent conditions
 
 Circuit
 -------
-E = 10V Rc = 4.7kΩ 
 
 ![TODO](img/TODO.png)
 
-###Curve
+Plot 
+----
 TODO
 
 
@@ -63,8 +58,11 @@ Uce/Ib transfer function
 Examine the output signal of the first circuit. Determine the linearity of the
 output, as in the relation of Uce to Ib.
 Uses the measurement setup and circuit shown in Figure 1.
+The input voltage source is low enough impedance to be considered constant.
+The linear region is very small, the transistor is best used as a switch in this
+configuration.
 
-![TODO](img/TODO.png)
+![Uce as a function of Ib](img/uce-ib_plot.png)
 
 
 Ic/Ib characteristics and current amplification
@@ -73,7 +71,11 @@ Ic/Ib characteristics and current amplification
 Measurements
 ------------
 
-![Ic as a function of Ib](img/TODO.png)
+![Ic as a function of Ib](img/ic-ib_plot.png)
+
+
+![Current gain as a function of base current](img/ic-ib-amplification_plot.png)
+
 
 Comments
 --------
