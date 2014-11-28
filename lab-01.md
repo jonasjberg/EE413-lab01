@@ -17,16 +17,10 @@ Circuit
 ###Fixed collector voltage
 With the collector resistor R2 left out or shorted, an adjustable power supply
 is connected directly across the collector-emitter junction, fixing the
-collector voltage. Adjusting voltage V1 translates to varying the base
-current Ib and in turn the collector current Ic. 
-
-![Ltspice schematic](img/ic-uce_ltspice-schem.png)\  
-
-
-Circuit simulation confirms that measurements reflect typical bjt
-characteristics.
-
-![Ltspice simulation of Ic-Uce-characteristics](img/ic-uce_ltspice-plot.png)\  
+collector voltage. First we get the base currents for known collector currents.
+Adjusting voltage V1 translates to varying the base current Ib and in turn the
+collector current Ic.
+The transistor used is a BC547C.
 
 
 ###Measurements
@@ -40,13 +34,23 @@ Ic (mA)     Ib (µA)
 Table: Measurement of base current vs collector current
 
 
-Uin (V)     Uout(V)     Av(x)
--------     -------     -----
--0.1051     +0.1051     -1
--1.008      +1.008      -1
-+1.004      -1.004      -1
+The base current is then held at a constant value and the collector-emitter
+voltage is swept over a range of 0-10V in 1V steps.
+The results is given in the plot.
 
-Table: R2 = 10kΩ
+![Ic-Uce results](img/ic-uce_plot.png)
+
+
+###Simulation
+
+Spice circuit simulation confirms that measurements reflect typical bjt
+characteristics. The program used is Linear Technology ltspice, models extracted
+from transistor datasheet parameters.
+
+![Ltspice schematic](img/ic-uce_ltspice-schem.png)\  
+
+![Ltspice simulation of Ic-Uce-characteristics](img/ic-uce_ltspice-plot.png)\  
+
 
 
 Quiescent conditions
