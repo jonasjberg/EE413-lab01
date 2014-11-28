@@ -120,13 +120,13 @@ BJT amplifier
 ![AC bypassed BJT amplifier](img/bjt-bias_2AC.png)\
 
 
-                        Without AC bypass       AC bypassed
---------------------    -----------------       -----------
-Input voltage (mVtt)    111                     111
-Output voltage (Vtt)    111                     111
-Voltage gain (multiple) 111                     111
-Voltage gain (dB)       111                     111
-Phase shift (degrees)   111                     111
+                            Without AC bypass       AC bypassed
+--------------------        -----------------       -----------
+Input voltage (mVpp)        111                     111
+Output voltage (Vpp)        111                     111
+Voltage gain (multiple)     111                     111
+Voltage gain (dB)           111                     111
+Phase shift (degrees)       111                     111
 
 Table: Amplifier gain measurements
 
@@ -160,13 +160,13 @@ References
 
 WWW
 ---
-High injection effects
+Zeghbroech, B. Van - *High injection effects*, accessed 2014-11-28.
 <http://ecee.colorado.edu/~bart/book/book/chapter5/ch5_4.htm>
 
 Literature
 ----------
-Horowitz and Hill -  The Art of Electronics, Cambridge University Press 1989.
-Horowitz and Hayes - Student Manual for the Art of Electronics, Cambridge 1989.
+Horowitz and Hill -  *The Art of Electronics*, Cambridge University Press 1989.
+Horowitz and Hayes - *Student Manual for the Art of Electronics*, Cambridge 1989.
 
 
 Sources
