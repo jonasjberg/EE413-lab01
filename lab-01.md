@@ -122,11 +122,11 @@ BJT amplifier
 
                             Without AC bypass       AC bypassed
 --------------------        -----------------       -----------
-Input voltage (mVpp)        111                     111
-Output voltage (Vpp)        111                     111
-Voltage gain (multiple)     111                     111
-Voltage gain (dB)           111                     111
-Phase shift (degrees)       111                     111
+Input voltage (mVpp)        100                     111
+Output voltage (Vpp)        283                     
+Voltage gain (multiple)     2.83 
+Voltage gain (dB)           9.04
+Phase shift (degrees)       180                     111
 
 Table: Amplifier gain measurements
 
@@ -167,7 +167,7 @@ Literature
 ----------
 Horowitz and Hill -  *The Art of Electronics*, Cambridge University Press 1989.
 Horowitz and Hayes - *Student Manual for the Art of Electronics*, Cambridge 1989.
-
+Fairchild Semiconductor - *BC546/547/548/549/550 datasheet* Rev. A2, August 2002.
 
 Sources
 -------
