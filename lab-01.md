@@ -6,13 +6,15 @@ networks, amplification, bandwidth; and plotting characteristic curves of
 circuit parameters.
 
 Ic-Uce-characteristics
-----------------------
+======================
 
-###Theory
+Circuit
+-------
 
 ![Measurement setup](img/ic-uce_schem.png)\  
 
-####Fixed collector voltage
+
+###Fixed collector voltage
 With the collector resistor R2 left out or shorted, an adjustable power supply
 is connected directly across the collector-emitter junction, fixing the
 collector voltage. Adjusting voltage V1 translates to varying the base
@@ -20,21 +22,22 @@ current Ib and in turn the collector current Ic.
 
 ![Ltspice schematic](img/ic-uce_ltspice-schem.png)\  
 
+
 Circuit simulation confirms that measurements reflect typical bjt
 characteristics.
 
 ![Ltspice simulation of Ic-Uce-characteristics](img/ic-uce_ltspice-plot.png)\  
 
 
-####Measurements
+###Measurements
 
-Uin (V)     Uout(V)     Av(x)
--------     -------     -----
--0.105      +1.087      -10.54
--1.008      +10.236     -10.15
-+1.004      -10.104     -10.06
+Ic (mA)     Ib (µA)
+-------     -------
+0.5         1.14
+1.0         2.11 
+1.8         3.72 
 
-Table: R2 = 100kΩ
+Table: Measurement of base current vs collector current
 
 
 Uin (V)     Uout(V)     Av(x)
@@ -47,9 +50,10 @@ Table: R2 = 10kΩ
 
 
 Quiescent conditions
---------------------
+====================
 
-###Circuit
+Circuit
+-------
 E = 10V Rc = 4.7k
 
 ![TODO](img/TODO.png)\  
@@ -59,29 +63,31 @@ TODO
 
 
 Uce-Ib transfer function
-------------------------
+========================
 Examine the output signal of the first circuit. Determine the linearity of the
 output, as in the relation of Uce to Ib.
 
-###TODO
+TODO
 
 ![TODO](img/TODO.png)\  
 
 
 Ic-Ib-characteristics and current amplification
------------------------------------------------
+===============================================
 
-###Measurements
+Measurements
+------------
 
 ![Ic as a function of Ib](img/TODO.png)\  
 
-###Comments
+Comments
+--------
 TODO: Comment the curve, calculate current amplificationfactor deltaIc/deltaIb
 in regions of interest.
 
 
 BJT biasing
------------
+===========
 
 Rb          Ve          Ve          Rc 
 --          --          --          --
@@ -95,17 +101,23 @@ Rb          Ve          Ve          Rc
 ![BJT biasing circuit](img/bjt-bias_1.png)\  
 
 
-###BJT amplifier
+BJT amplifier
+=============
+
+###Amplification
 
 ![AC bypassed BJT amplifier](img/bjt-bias_2AC.png)\  
 
 
                         Without AC bypass       AC bypassed
                         -----------------       -----------
-Input voltage Uin       111                     111             mVtt
-Output voltage Uout     111                     111             Vtt
-Voltage gain            111                     111             x
-Voltage gain            111                     111             dB
-Phase shift             111                     111             degrees
+Input voltage (mVtt)    111                     111
+Output voltage (Vtt)    111                     111
+Voltage gain (multiple) 111                     111
+Voltage gain (dB)       111                     111
+Phase shift (degrees)   111                     111
 
-Table: Amplifier measurements
+Table: Amplifier gain measurements
+
+
+###Frequency response
