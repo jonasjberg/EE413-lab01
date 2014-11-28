@@ -81,7 +81,9 @@ Circuits are simulated in LTspice.
 
 Comments
 --------
-TODO
+Current gain decreases with base current. This is one of many nonideal
+characteristics of the transistor. The phenomena is called a "high injection
+effect". Source included in references. 
 
 
 BJT biasing
@@ -147,10 +149,16 @@ the input impedance of the stage.
 References
 ==========
 
+WWW
+---
+High injection effects
+<http://ecee.colorado.edu/~bart/book/book/chapter5/ch5_4.htm>
+
 Literature
 ----------
 Horowitz and Hill -  The Art of Electronics, Cambridge University Press 1989.
 Horowitz and Hayes - Student Manual for the Art of Electronics, Cambridge 1989.
+
 
 Sources
 -------
