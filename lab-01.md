@@ -63,8 +63,7 @@ Uce-Ib transfer function
 ========================
 Examine the output signal of the first circuit. Determine the linearity of the
 output, as in the relation of Uce to Ib.
-
-TODO
+Uses the measurement setup and circuit shown in Figure 1.
 
 ![TODO](img/TODO.png)
 
@@ -118,3 +117,19 @@ Table: Amplifier gain measurements
 
 
 ###Frequency response
+
+
+###Improved biasing
+The one resistor base bias is in practice not very reliable as it is dependant on transistor
+beta. A more practical design that scales better for production adds a second resistor, forming
+a voltage divider that fixes the base at a suitable level. For maximum dynamic range half of Vsupply,
+plus a diode drop to compensate for the base-emitter voltage.
+
+![Voltage divider bias](img/bjt-bias_2AC_improved.png)
+
+
+###"Noiseless" biasing
+For small signals and high input impedance, the biasing can be improved further in terms of bias voltage
+"stiffness" and power supply noise rejection. 
+
+![Voltage divider with filtered voltage reference](img/bjt-bias_2AC_quiet.png)
