@@ -1,0 +1,14 @@
+* Z:\home\spock\HiG\EE413A-mätteknik\lab\lab-01\sim\1_Ic-Uce-characteristics_nolabels2.asc
+Q1 N001 N002 0 0 BC547C
+R1 N002 V1 1MEG
+R2 V2 N001 4.7k
+V2 V2 0 {Uce}
+I1 0 V1 3.72µ
+.model NPN NPN
+.model PNP PNP
+.lib C:\Program Files\LTC\LTspiceIV\lib\cmp\standard.bjt
+;op
+.step param Uce 0 10 1
+.tran 1m
+.backanno
+.end
