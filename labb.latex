@@ -4,6 +4,11 @@
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
+
+%% added
+\usepackage{abstract}
+%%
+
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
@@ -60,9 +65,9 @@ $endif$
 $if(verbatim-in-note)$
 \usepackage{fancyvrb}
 $endif$
-$if(tables)$
-\usepackage{longtable,booktabs}
-$endif$
+%$if(tables)$
+%\usepackage{longtable,booktabs}
+%$endif$
 $if(graphics)$
 \usepackage{graphicx}
 % Redefine \includegraphics so that, unless explicit options are
@@ -147,6 +152,12 @@ $if(title)$
 \maketitle
 $endif$
 
+\begin{abstract}
+"This lab is meant to teach and show the practical use of NPN bjt amplifiers.
+The lab includes constructing and measuring DC circuits, calculating biasing networks,
+amplification, bandwidth and plotting characteristic curves of circuit parameters."
+\end{abstract}
+
 $for(include-before)$
 $include-before$
 
@@ -159,12 +170,6 @@ $if(toc)$
 }
 $endif$
 
-$if(abstract)$
-
-\begin{abstract}
-    $abstract$
-\end{abstract}
-$endif$
 
 $body$
 
