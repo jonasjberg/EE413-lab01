@@ -93,7 +93,7 @@ Rb          Ve          Ve          Rc
 820kΩ       00          00          00
 1MΩ         00          00          00
 
-Table: Bias resistor with bias voltages 
+Table: Bias resistor with bias voltages
 
 ![BJT biasing circuit](img/bjt-bias_1.png)
 

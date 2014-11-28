@@ -65,9 +65,9 @@ $endif$
 $if(verbatim-in-note)$
 \usepackage{fancyvrb}
 $endif$
-%$if(tables)$
-%\usepackage{longtable,booktabs}
-%$endif$
+$if(tables)$
+\usepackage{longtable,booktabs}
+$endif$
 $if(graphics)$
 \usepackage{graphicx}
 % Redefine \includegraphics so that, unless explicit options are
@@ -144,13 +144,25 @@ $endif$
 $if(subtitle)$
 \subtitle{$subtitle$}
 $endif$
-\author{$for(author)$$author$$sep$ \and $endfor$}
+%\author{$for(author)$$author$$sep$ \and $endfor$}
 \date{$date$}
 
 \begin{document}
 $if(title)$
 \maketitle
 $endif$
+
+$for(author)$
+$if(author.name)$
+$author.name$\
+$if(author.affiliation)$ 
+($author.affiliation$)\\
+$endif$
+$else$
+$author$\
+$endif$
+$endfor$
+
 
 \begin{abstract}
 "This lab is meant to teach and show the practical use of NPN bjt amplifiers.
