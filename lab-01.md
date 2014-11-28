@@ -60,7 +60,7 @@ TODO
 
 
 Uce-Ib transfer function
-========================
+=======================
 Examine the output signal of the first circuit. Determine the linearity of the
 output, as in the relation of Uce to Ib.
 Uses the measurement setup and circuit shown in Figure 1.
