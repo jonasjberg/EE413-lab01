@@ -7,12 +7,12 @@ Circuit
 ![Measurement setup](img/ic-uce_schem.png)
 
 
-###Fixed collector voltage With the collector resistor R2 left out or shorted,
-an adjustable power supply is connected directly across the collector-emitter
-junction, fixing the collector voltage. First we get the base currents for
-known collector currents.  Adjusting voltage V1 translates to varying the base
-current Ib and in turn the collector current Ic.  The transistor used is a
-BC547C.
+###Fixed collector voltage 
+With the collector resistor R2 left out or shorted, an adjustable power supply
+is connected directly across the collector-emitter junction, fixing the
+collector voltage. First we get the base currents for known collector currents.
+Adjusting voltage V1 translates to varying the base current Ib and in turn the
+collector current Ic.  The transistor used is a BC547C.
 
 
 ###Measurements
@@ -50,7 +50,7 @@ Quiescent conditions
 
 Circuit
 -------
-E = 10V Rc = 4.7k
+E = 10V Rc = 4.7kΩ 
 
 ![TODO](img/TODO.png)
 
@@ -58,8 +58,8 @@ E = 10V Rc = 4.7k
 TODO
 
 
-Uce-Ib transfer function
-=======================
+Uce/Ib transfer function
+========================
 Examine the output signal of the first circuit. Determine the linearity of the
 output, as in the relation of Uce to Ib.
 Uses the measurement setup and circuit shown in Figure 1.
@@ -67,7 +67,7 @@ Uses the measurement setup and circuit shown in Figure 1.
 ![TODO](img/TODO.png)
 
 
-Ic-Ib-characteristics and current amplification
+Ic/Ib characteristics and current amplification
 ===============================================
 
 Measurements
@@ -131,7 +131,11 @@ compensate for the base-emitter voltage.
 
 
 ###"Noiseless" biasing
-For small signals and high input impedance, the biasing can be improved further in terms of bias voltage
-"stiffness" and power supply noise rejection. 
+For small signals and high input impedance, the biasing can be improved further
+in terms of bias voltage "stiffness" and power supply noise rejection. 
+The bias voltage is derived from a separate low impedance voltage divider,
+heavily filtered and almost a short circuit as far as AC signals are concerned.
+The bias voltage is tapped with a higher value resistor which effectively sets
+the input impedance of the stage.
 
 ![Voltage divider with filtered voltage reference](img/bjt-bias_2AC_quiet.png)
