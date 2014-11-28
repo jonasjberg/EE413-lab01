@@ -1,0 +1,26 @@
+* Z:\home\spock\HiG\EE413A-mätteknik\lab\lab-01\sim\6_amplifier-av.asc
+Q1 N002 N003 N004 0 BC547C
+R2 N002 N001 {Rc}
+V2 N001 0 {Uce}
+R3 N003 N001 820k
+C2 Vout N002 1µ
+R4 0 Vout 10MEG
+R5 0 N004 390
+C1 N003 Vin 1µ
+V1 Vin 0 SINE(0 50m 1k) AC 1
+.model NPN NPN
+.model PNP PNP
+.lib C:\Program Files\LTC\LTspiceIV\lib\cmp\standard.bjt
+;op
+* .step param Uce 0 10 1
+;tran 10m
+.param Uce=20
+* .step param Vin 0 10 1
+* .step param Rb list 390k 470k 560k 680k 820k 1MEG
+.param Vin=1
+.param Rc=2.2k
+* .step param Rc list 100 220 330 470 510 680 820 1k 2.2k 3.3k 4.7k 5.1k 6.8k 8.2k 10k 12k 15k 22k
+* .param Rb=390k
+.ac oct 100 20 20k
+.backanno
+.end

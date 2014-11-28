@@ -1,3 +1,5 @@
+\newpage
+
 Ic-Uce-characteristics
 ======================
 
@@ -38,6 +40,10 @@ the plot.
 Spice circuit simulation confirms that measurements reflect typical bjt
 characteristics. The program used is Linear Technology LTspice, transistor
 model extracted from transistor datasheet parameters.
+
+![Ic/Uce schematic](img/ic-uce_ltspice-schem.png)
+
+![Ic/Uce plot](img/ic-uce_ltspice-plot.png)
 
 
 Quiescent conditions
@@ -122,16 +128,24 @@ BJT amplifier
 
                             Without AC bypass       AC bypassed
 --------------------        -----------------       -----------
-Input voltage (mVpp)        100                     111
-Output voltage (Vpp)        283                     
-Voltage gain (multiple)     2.83 
-Voltage gain (dB)           9.04
-Phase shift (degrees)       180                     111
+Input voltage (mVpp)        100                     100
+Output voltage (Vpp)        0.283                   9.23
+Voltage gain (multiple)     2.83                    91.3 
+Voltage gain (dB)           9.04                    39.2
+Phase shift (degrees)       180                     155
 
 Table: Amplifier gain measurements
 
 
 ###Frequency response
+
+Frequency response shows no high frequency rolloff in the audible frequency
+range 20Hz-20kHz. There is however a high frequency limit, set primarily by
+stray capacitances in breadboards and such.
+
+![Amplifier frequency response circuit](img/6_amplifier-av_schem.png)
+
+![Amplifier frequency response and phase shift](img/6_amplifier-av_bode.png)
 
 
 ###Improved biasing
