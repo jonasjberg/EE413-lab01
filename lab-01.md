@@ -82,25 +82,34 @@ Circuits are simulated in LTspice.
 Comments
 --------
 Current gain decreases with base current. This is one of many nonideal
-characteristics of the transistor. The phenomena is called a "high injection
+characteristics of the transistor. The phenomenon is called a "high injection
 effect". Source included in references. 
 
 
 BJT biasing
 ===========
 
-Rb          Ve          Ve          Rc 
---          --          --          --
-390kΩ       00          00          00
-470kΩ       00          00          00
-560kΩ       00          00          00
-680kΩ       00          00          00
-820kΩ       00          00          00
-1MΩ         00          00          00
+Making Vce 10V maximizes the dynamic range of the amplifier, I.E. improves
+linearity and reduces clipping of higher amplitude signals, by centering the
+operating "bias" point. The available voltage is split evenly between the three
+droppers; collector resistor collector-emitter resistance and emitter resistor.
+
+Rb (Ω)      Ve (V)      Rc (Ω)  
+------      ------      ------
+390k        10.3        1
+470k        9.3         47
+560k        8.2         1k
+680k        7.7         1k
+820k        6.8         1.2k
+1M          5.9         3.3 
 
 Table: Bias resistor with bias voltages
 
 ![BJT biasing circuit](img/bjt-bias_1.png)\
+
+
+The collector resistor would have to be a short to put Vce at 10V. This method
+of biasing is thoroughly unpractical.
 
 
 BJT amplifier
