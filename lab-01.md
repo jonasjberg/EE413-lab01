@@ -51,12 +51,11 @@ Quiescent conditions
 
 Circuit
 -------
-
-![TODO](img/TODO.png)\
+..
 
 Plot 
 ----
-TODO
+..
 
 
 Uce/Ib transfer function

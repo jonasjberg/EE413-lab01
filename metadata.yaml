@@ -2,10 +2,10 @@
 title: 'Lab 138 - Transistors and Amplifiers'
 author:
 - name: Jonas Sjöberg
-  affiliation: Högskolan i Gävle, Elektronikingenjörsprogrammet
+  affiliation: tel12jsg@student.hig.se
   email: tel12jsg@student.hig.se
 - name: Esther Hedlund
-  affiliation: Högskolan i Gävle, Elektronikingenjörsprogrammet
+  affiliation: tfk13ehd@student.hig.se
   email: tfk13ehd@student.hig.se
 abstract: "This lab is meant to teach and show the practical use of NPN bjt amplifiers. The lab includes constructing and measuring DC circuits, calculating biasing networks, amplification, bandwidth and plotting characteristic curves of circuit parameters."
 ...
