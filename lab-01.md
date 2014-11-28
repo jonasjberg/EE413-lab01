@@ -70,6 +70,8 @@ Ic/Ib characteristics and current amplification
 
 Measurements
 ------------
+Circuits are simulated in LTspice.
+
 
 ![Ic as a function of Ib](img/ic-ib_plot.png)
 
@@ -141,3 +143,17 @@ The bias voltage is tapped with a higher value resistor which effectively sets
 the input impedance of the stage.
 
 ![Voltage divider with filtered voltage reference](img/bjt-bias_2AC_quiet.png)
+
+
+References
+==========
+
+Literature
+----------
+Horowitz and Hill -  The Art of Electronics, Cambridge University Press 1989.
+Horowitz and Hayes - Student Manual for the Art of Electronics, Cambridge 1989.
+
+Sources
+-------
+Full source, including spice simulation files, CSV data, schematics, etc is
+available at https://github.com/jonasjberg/EE413-lab01
