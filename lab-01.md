@@ -1,18 +1,3 @@
----
-title: Lab 138 - Transistors and Amplifiers 
-author:
-- name: Jonas Sjöberg
-  affiliation: Högskolan i Gävle, Elektronikingenjörsprogrammet
-  email: tel12jsg@student.hig.se
-- name: Esther Hedlund
-  affiliation: Högskolan i Gävle, Elektronikingenjörsprogrammet
-  email: tfk13ehd@student.hig.se
-date: 27 November 2014
-abstract: lab report for lab 138 - transistors and amplifiers
-bibliography: <!-- \bibliography{/Users/kjhealy/Documents/bibs/socbib-pandoc.bib} This is a hack for Emacs users so that RefTeX knows where your bibfile is, and you can use RefTeX citation completion in your .md files. -->
-...
-
-
 Introduction
 ============
 This lab is meant to teach and show the practical use of NPN bjt amplifiers.
