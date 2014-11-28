@@ -7,13 +7,12 @@ Circuit
 ![Measurement setup](img/ic-uce_schem.png)
 
 
-###Fixed collector voltage
-With the collector resistor R2 left out or shorted, an adjustable power supply
-is connected directly across the collector-emitter junction, fixing the
-collector voltage. First we get the base currents for known collector currents.
-Adjusting voltage V1 translates to varying the base current Ib and in turn the
-collector current Ic.
-The transistor used is a BC547C.
+###Fixed collector voltage With the collector resistor R2 left out or shorted,
+an adjustable power supply is connected directly across the collector-emitter
+junction, fixing the collector voltage. First we get the base currents for
+known collector currents.  Adjusting voltage V1 translates to varying the base
+current Ib and in turn the collector current Ic.  The transistor used is a
+BC547C.
 
 
 ###Measurements
@@ -28,8 +27,8 @@ Table: Measurement of base current vs collector current
 
 
 The base current is then held at a constant value and the collector-emitter
-voltage is swept over a range of 0-10V in 1V steps.
-The results is given in the plot.
+voltage is swept over a range of 0-10V in 1V steps. The results is given in
+the plot.
 
 ![Ic-Uce results](img/ic-uce_plot.png)
 
@@ -37,8 +36,8 @@ The results is given in the plot.
 ###Simulation
 
 Spice circuit simulation confirms that measurements reflect typical bjt
-characteristics. The program used is Linear Technology ltspice, models extracted
-from transistor datasheet parameters.
+characteristics. The program used is Linear Technology ltspice, models
+extracted from transistor datasheet parameters.
 
 ![Ltspice schematic](img/ic-uce_ltspice-schem.png)
 
@@ -94,6 +93,8 @@ Rb          Ve          Ve          Rc
 820kΩ       00          00          00
 1MΩ         00          00          00
 
+Table: Bias resistor with bias voltages 
+
 ![BJT biasing circuit](img/bjt-bias_1.png)
 
 
@@ -106,7 +107,7 @@ BJT amplifier
 
 
                         Without AC bypass       AC bypassed
-                        -----------------       -----------
+--------------------    -----------------       -----------
 Input voltage (mVtt)    111                     111
 Output voltage (Vtt)    111                     111
 Voltage gain (multiple) 111                     111
@@ -120,10 +121,11 @@ Table: Amplifier gain measurements
 
 
 ###Improved biasing
-The one resistor base bias is in practice not very reliable as it is dependant on transistor
-beta. A more practical design that scales better for production adds a second resistor, forming
-a voltage divider that fixes the base at a suitable level. For maximum dynamic range half of Vsupply,
-plus a diode drop to compensate for the base-emitter voltage.
+The one resistor base bias is in practice not very reliable as it is dependant
+on transistor beta. A more practical design that scales better for production
+adds a second resistor, forming a voltage divider that fixes the base at a
+suitable level. For maximum dynamic range half of Vsupply, plus a diode drop to
+compensate for the base-emitter voltage.
 
 ![Voltage divider bias](img/bjt-bias_2AC_improved.png)
 
