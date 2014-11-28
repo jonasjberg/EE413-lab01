@@ -158,6 +158,14 @@ $if(toc)$
 \tableofcontents
 }
 $endif$
+
+$if(abstract)$
+
+\begin{abstract}
+    $abstract$
+\end{abstract}
+$endif$
+
 $body$
 
 $if(natbib)$
