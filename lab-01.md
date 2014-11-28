@@ -4,7 +4,7 @@ Ic-Uce-characteristics
 Circuit
 -------
 
-![Measurement setup](img/ic-uce_schem.png)
+![Measurement setup](img/ic-uce_schem.png)\
 
 
 ###Fixed collector voltage 
@@ -30,7 +30,7 @@ The base current is then held at a constant value and the collector-emitter
 voltage is swept over a range of 0-10V in 1V steps. The results is given in
 the plot.
 
-![Ic-Uce results](img/ic-uce_plot.png)
+![Ic-Uce results](img/ic-uce_plot.png)\
 
 
 ###Simulation
@@ -46,7 +46,7 @@ Quiescent conditions
 Circuit
 -------
 
-![TODO](img/TODO.png)
+![TODO](img/TODO.png)\
 
 Plot 
 ----
@@ -62,7 +62,7 @@ The input voltage source is low enough impedance to be considered constant.
 The linear region is very small, the transistor is best used as a switch in this
 configuration.
 
-![Uce as a function of Ib](img/uce-ib_plot.png)
+![Uce as a function of Ib](img/uce-ib_plot.png)\
 
 
 Ic/Ib characteristics and current amplification
@@ -73,16 +73,15 @@ Measurements
 Circuits are simulated in LTspice.
 
 
-![Ic as a function of Ib](img/ic-ib_plot.png)
+![Ic as a function of Ib](img/ic-ib_plot.png)\
 
 
-![Current gain as a function of base current](img/ic-ib-amplification_plot.png)
+![Current gain as a function of base current](img/ic-ib-amplification_plot.png)\
 
 
 Comments
 --------
-TODO: Comment the curve, calculate current amplificationfactor deltaIc/deltaIb
-in regions of interest.
+TODO
 
 
 BJT biasing
@@ -99,7 +98,7 @@ Rb          Ve          Ve          Rc
 
 Table: Bias resistor with bias voltages
 
-![BJT biasing circuit](img/bjt-bias_1.png)
+![BJT biasing circuit](img/bjt-bias_1.png)\
 
 
 BJT amplifier
@@ -107,7 +106,7 @@ BJT amplifier
 
 ###Amplification
 
-![AC bypassed BJT amplifier](img/bjt-bias_2AC.png)
+![AC bypassed BJT amplifier](img/bjt-bias_2AC.png)\
 
 
                         Without AC bypass       AC bypassed
@@ -131,7 +130,7 @@ adds a second resistor, forming a voltage divider that fixes the base at a
 suitable level. For maximum dynamic range half of Vsupply, plus a diode drop to
 compensate for the base-emitter voltage.
 
-![Voltage divider bias](img/bjt-bias_2AC_improved.png)
+![Voltage divider bias](img/bjt-bias_2AC_improved.png)\
 
 
 ###"Noiseless" biasing
@@ -142,7 +141,7 @@ heavily filtered and almost a short circuit as far as AC signals are concerned.
 The bias voltage is tapped with a higher value resistor which effectively sets
 the input impedance of the stage.
 
-![Voltage divider with filtered voltage reference](img/bjt-bias_2AC_quiet.png)
+![Voltage divider with filtered voltage reference](img/bjt-bias_2AC_quiet.png)\
 
 
 References
@@ -156,4 +155,4 @@ Horowitz and Hayes - Student Manual for the Art of Electronics, Cambridge 1989.
 Sources
 -------
 Full source, including spice simulation files, CSV data, schematics, etc is
-available at https://github.com/jonasjberg/EE413-lab01
+available at <https://github.com/jonasjberg/EE413-lab01>
