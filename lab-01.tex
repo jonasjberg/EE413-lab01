@@ -29,7 +29,7 @@
 \usepackage{graphicx}
 \usepackage{longtable,booktabs}
 \usepackage{microtype}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 
 \setlength\parindent{0pt} % Removes all indentation from paragraphs
 
@@ -72,14 +72,22 @@ This lab is meant to teach and show the practical use of bipolar junction transi
 
 \newpage
 
+% ==============================================================================
+% TABLE OF CONTENTS
+% ==============================================================================
 {
-\hypersetup{linkcolor=black}
+\hypersetup{ 
+	colorlinks=true,
+	citecolor=black,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=black
+}
 \setcounter{tocdepth}{3}
 \tableofcontents
 }
 
 \newpage
-
 
 % ==============================================================================
 % SECTION: Ic-Uce-characteristics
@@ -96,7 +104,7 @@ This lab is meant to teach and show the practical use of bipolar junction transi
     \label{fig:ic-uce_schem}
 \end{figure}
 
-\subsubsection{Fixed collector voltage}\label{fixed-collector-voltage}
+\subsection{Fixed collector voltage}\label{fixed-collector-voltage}
 % ------------------------------------------------------------------------------
 
 With the collector resistor $R_{2}$ left out or shorted, an adjustable power
@@ -106,7 +114,7 @@ collector currents. Adjusting voltage $V_{1}$ translates to varying the base
 current $I_{b}$ and in turn the collector current $I_{c}$. The transistor used is
 a BC547C.
 
-\subsubsection{Measurements}\label{measurements}
+\subsection{Measurements}\label{measurements}
 % ------------------------------------------------------------------------------
 
 \begin{longtable}[c]{@{}l@{}l}
@@ -165,24 +173,14 @@ The program used is Linear Technology LTspice, with a transistor model based on 
 % SECTION: Quiescent conditions
 % ==============================================================================
 \section{Quiescent conditions}\label{quiescent-conditions}
-
-\subsection{Circuit}\label{circuit-1}
-% ------------------------------------------------------------------------------
-
-TODO
+The calculated results for the basic circuit is shown in Figure~\ref{fig:load-line_plot}.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.1\textwidth]{img/TODO.png}
-    \caption{}
-    \label{}
+    \includegraphics[width=\textwidth]{img/load-line_plot}
+    \caption{Calculated load line.}
+    \label{fig:load-line_plot}
 \end{figure}
-
-\subsection{Measurements}\label{quiescent-conditions-measurements}
-% ------------------------------------------------------------------------------
-
-TODO
-
 
 % ==============================================================================
 % SECTION: Ib transfer function
@@ -211,7 +209,10 @@ amplification}\label{icib-characteristics-and-current-amplification}
 \subsection{Measurements}\label{measurements-1}
 % ------------------------------------------------------------------------------
 
-Circuits are simulated in LTspice.
+Results for collector current as a function of base current is shown in Figure~\ref{fig:ic-ib_plot}.
+
+The current gain, $\beta = \frac{I_{c}}{I_{b}}$ is shown in Figure~\ref{fig:ic-ib-amplification_plot}
+as a function of base current, results in multiples and dBs.
 
 \begin{figure}[htbp]
     \centering
@@ -241,14 +242,17 @@ injection effect''. Source included in references.
 % ==============================================================================
 \section{BJT biasing}\label{bjt-biasing}
 
+\subsection{Measurements}\label{bjt-biasing-measurements}
+% ------------------------------------------------------------------------------
 Making $V_{ce}$ 10V maximizes the dynamic range of the amplifier, I.E. improves
 linearity and reduces clipping of higher amplitude signals, by centering the
 operating "bias" point. The available voltage is split evenly between the three
 droppers; collector resistor collector-emitter resistance and emitter resistor.
+The circuit used is shown in Figure~\ref{fig:bjt-bias_1}.
 
 \begin{longtable}[c]{@{}llll@{}}
 \toprule\addlinespace
-$R_{b} (\Omega)$ & $V_{e}$ (V) & $R_{c} (\Omega)$
+$R_{b}  (\Omega)$ & $V_{e}$ (V) & $R_{c}  (\Omega)$
 \\\addlinespace
 \midrule\endhead
 390k & 10.3 & 1
@@ -271,14 +275,14 @@ $R_{b} (\Omega)$ & $V_{e}$ (V) & $R_{c} (\Omega)$
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.75\textwidth]{img/bjt-bias_1.png}
-    \caption{BJT biasing circuit.}
+    \caption{BJT biasing circuit, emitter impedance resistive.}
     \label{fig:bjt-bias_1}
 \end{figure}
 
 \subsection{Comments}\label{comments}
 % ------------------------------------------------------------------------------
-The collector resistor would have to be a short to put Vce at 10V. This method
-of biasing is thoroughly unpractical.
+The collector resistor would have to be a short to put Vce at 10V. 
+We come to the conclusion that this method of biasing is thoroughly unpractical.
 
 
 % ==============================================================================
@@ -286,17 +290,22 @@ of biasing is thoroughly unpractical.
 % ==============================================================================
 \section{BJT amplifier}\label{bjt-amplifier}
 
-\subsubsection{Amplification}\label{amplification}
+\subsection{Measurements}\label{bjt-measurements}
 % ------------------------------------------------------------------------------
+An oscilloscope is used for measuring the amplifier gain with a 1kHz 1V peak to
+peak sine wave. The circuit used is shown in Figure~\ref{fig:bjt-bias_1}, 
+coupling is DC only. For the second measurement, a 100$\mu$F capacitor was connected
+across the emitter resistor, the circuit is shown in Figure~\ref{fig:bjt-bias_2AC}.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.75\textwidth]{img/bjt-bias_2AC.png}
-    \caption{BJT biasing circuit.}
+    \caption{BJT biasing circuit, emitter AC bypassed.}
     \label{fig:bjt-bias_2AC}
 \end{figure}
 
-
+\subsubsection{Amplifier gain}\label{amplifier-gain}
+% ------------------------------------------------------------------------------
 %\begin{longtable}[c]{@{}lll@{}}
 \begin{longtable}[c]{lll}
 \toprule\addlinespace
@@ -320,6 +329,7 @@ Phase shift (degrees) & 180 & 150
 
 \subsubsection{Frequency response}\label{frequency-response}
 % ------------------------------------------------------------------------------
+Measurement results for the circuit in Figure~\ref{fig:6_amplifier-av_schem} are shown in Figure~\ref{fig:6_amplifier-av_bode}.
 Frequency response shows no high frequency rolloff in the audible frequency
 range 20Hz-20kHz. There is however a high frequency limit, set primarily by
 stray capacitances in breadboards and such.
@@ -339,7 +349,7 @@ stray capacitances in breadboards and such.
 \end{figure}
 
 
-\subsubsection{Improved biasing}\label{improved-biasing}
+\subsection{Improved biasing}\label{improved-biasing}
 % ------------------------------------------------------------------------------
 The one resistor base bias is in practice not very reliable as it is dependant
 on transistor beta. A more practical design that scales better for production
@@ -370,6 +380,18 @@ the input impedance of the stage.
     \caption{Voltage divider with filtered voltage reference.}
     \label{fig:bjt-bias_2AC_quiet}
 \end{figure}
+
+
+\subsection{Comments}\label{comments}
+% ------------------------------------------------------------------------------
+The AC coupling capacitor forms a high pass filter togeter with the combined
+parallel resistance of the biasing network and effective input resistance of
+the transistor base. Values of these components is selected to shave off unwanted
+frequencies, when dealing with audio often radio frequencies and line voltage hum.
+Sometimes you can get away with omitting the input coupling capacitor, but only
+if the input signal rides on top of a DC offset. It is considered best practice
+to always design circuits for worst case scenarios, I.E. for many scenarios it 
+can be beneficial to decouple and current limit all AC signal inputs and outputs.
 
 % ==============================================================================
 % SECTION: References
