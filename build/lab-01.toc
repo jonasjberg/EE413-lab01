@@ -1,0 +1,23 @@
+\contentsline {section}{\numberline {1}Ic-Uce-characteristics}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}Circuit}{3}{subsection.1.1}
+\contentsline {subsubsection}{\numberline {1.1.1}Fixed collector voltage}{3}{subsubsection.1.1.1}
+\contentsline {subsubsection}{\numberline {1.1.2}Measurements}{3}{subsubsection.1.1.2}
+\contentsline {subsection}{\numberline {1.2}Simulation}{4}{subsection.1.2}
+\contentsline {section}{\numberline {2}Quiescent conditions}{4}{section.2}
+\contentsline {subsection}{\numberline {2.1}Circuit}{4}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Measurements}{4}{subsection.2.2}
+\contentsline {section}{\numberline {3}Uce/Ib transfer function}{4}{section.3}
+\contentsline {section}{\numberline {4}Ic/Ib characteristics and current amplification}{6}{section.4}
+\contentsline {subsection}{\numberline {4.1}Measurements}{6}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Comments}{6}{subsection.4.2}
+\contentsline {section}{\numberline {5}BJT biasing}{6}{section.5}
+\contentsline {subsection}{\numberline {5.1}Comments}{7}{subsection.5.1}
+\contentsline {section}{\numberline {6}BJT amplifier}{7}{section.6}
+\contentsline {subsubsection}{\numberline {6.0.1}Amplification}{7}{subsubsection.6.0.1}
+\contentsline {subsubsection}{\numberline {6.0.2}Frequency response}{7}{subsubsection.6.0.2}
+\contentsline {subsubsection}{\numberline {6.0.3}Improved biasing}{11}{subsubsection.6.0.3}
+\contentsline {subsubsection}{\numberline {6.0.4}``Noiseless'' biasing}{11}{subsubsection.6.0.4}
+\contentsline {section}{\numberline {7}References}{12}{section.7}
+\contentsline {subsection}{\numberline {7.1}www}{12}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Literature}{12}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}Sources}{12}{subsection.7.3}
