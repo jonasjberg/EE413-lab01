@@ -30,6 +30,7 @@
 \usepackage{longtable,booktabs}
 \usepackage{microtype}
 \usepackage[hidelinks]{hyperref}
+\usepackage{gensymb}
 
 \setlength\parindent{0pt} % Removes all indentation from paragraphs
 
@@ -320,7 +321,7 @@ Voltage gain (multiple) & 2.83 & 91.3
 \\\addlinespace
 Voltage gain (dB) & 9.04 & 39.2
 \\\addlinespace
-Phase shift (degrees) & 180 & 150
+Phase shift ($\degree$) & 180 & 150
 \\\addlinespace
 \bottomrule
 \addlinespace
@@ -392,6 +393,10 @@ Sometimes you can get away with omitting the input coupling capacitor, but only
 if the input signal rides on top of a DC offset. It is considered best practice
 to always design circuits for worst case scenarios, I.E. for many scenarios it 
 can be beneficial to decouple and current limit all AC signal inputs and outputs.
+
+The signal phase is shifted 180$\degree$ when DC coupling the signal, the circuit topology
+is inverting. When AC coupling, the phase shift changes to 150$\degree$, reflecting the high pass filter
+effect of the input network.
 
 % ==============================================================================
 % SECTION: References
